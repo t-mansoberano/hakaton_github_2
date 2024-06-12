@@ -23,6 +23,4 @@ jobs:
         az containerapp update \
           --name ${{ vars.AZURE_PREFIX }}acr \
           --resource-group ${{ vars.AZURE_RG }} \
-          --image ${{ secrets.REGISTRY_USERNAME }}/${{ vars.AZURE_PREFIX }}containerapp:latest \
-          --environment ${{ vars.AZURE_PREFIX }}containerappenvironment \
-          --registry-server ${{ secrets.REGISTRY_USERNAME }}
+          --image ${{ secrets.REGISTRY_USERNAME }}/${{ vars.AZURE_PREFIX }}containerapp:latest
