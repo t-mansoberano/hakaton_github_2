@@ -21,6 +21,6 @@ jobs:
     - name: Deploy to Azure Container Apps
       run: |
         az containerapp update \
-          --name ${{ vars.AZURE_PREFIX }}acr \
+          --name ${{ vars.AZURE_PREFIX }}containerapp \
           --resource-group ${{ vars.AZURE_RG }} \
           --image ${{ secrets.REGISTRY_USERNAME }}/${{ vars.AZURE_PREFIX }}containerapp:latest
